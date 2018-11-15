@@ -13,11 +13,9 @@ class AddColumnToStudentBookedPackages extends Migration
      */
     public function up()
     {
-        Schema::table('teacher_booking_classes',function($table){
-            $table->integer('ClubId')->unsigned();
-            $table->foreign('ClubId')->references('id')->on('clubs');           // Foreign Key
-            $table->integer('ClassId')->unsigned();
-            $table->foreign('ClassId')->references('id')->on('class_lists');   // Foreign Key
+        Schema::table('student_booked_packages',function($table){
+            $table->integer('PackageId')->unsigned();
+            $table->foreign('PackageId')->references('id')->on('packages');     // Foreign Key
         });
     }
 
