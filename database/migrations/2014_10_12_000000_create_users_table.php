@@ -29,9 +29,10 @@ class CreateUsersTable extends Migration
             $table->string('Password',80);                                      //Password is HashCode(Encrypted)
             $table->enum('Role',['super','admin','teacher','student']);
             $table->enum('Status',['active','blocked','banned']);
+            $table->boolean('Verified');
             $table->string('Image',100);
             $table->timestamp('CreatedDate');
-            $table->rememberToken();        //Default Field of Laravel
+            $table->rememberToken();                                            //Default Field of Laravel
         });
     }
 
