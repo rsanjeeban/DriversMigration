@@ -24,5 +24,4 @@ class users extends Model
     public function StudentPackages(){
         return $this->hasMany('App\StudentBookedPackage','StudentId');
     }
-
 }
